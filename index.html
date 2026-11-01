@@ -4,29 +4,41 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Ahmad Ali | Full Stack Developer</title>
+    <meta name="description" content="Portfolio of Ahmad Ali, a full stack developer building interactive websites and applications.">
+    <meta property="og:title" content="Ahmad Ali | Full Stack Developer">
+    <meta property="og:description" content="Projects, skills and education of Ahmad Ali.">
+    <meta property="og:type" content="website">
+    <meta name="theme-color" content="#0057ff">
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='24' fill='%230057ff'/><text x='50' y='68' font-size='56' font-family='Arial' font-weight='700' text-anchor='middle' fill='white'>A</text></svg>">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="upgrade.css">
     <script src="https://kit.fontawesome.com/9880da102b.js" crossorigin="anonymous"></script>
-    <script>document.documentElement.classList.add('js')</script>
+    <script>
+        document.documentElement.classList.add('js');
+        try { var t = localStorage.getItem('theme'); if (!t && matchMedia('(prefers-color-scheme: dark)').matches) t = 'dark'; if (t) document.documentElement.dataset.theme = t; } catch (e) {}
+    </script>
 </head>
 <body>
+    <a class="skip" href="#top">Skip to content</a>
     <div class="progress" id="progress"></div>
     <div class="blob b1"></div><div class="blob b2"></div>
 
     <header class="nav">
         <a href="#top" class="logo">Ahmad<span>.</span></a>
-        <nav id="nav">
+        <nav id="nav" aria-label="Main">
+            <a href="#about">About</a>
             <a href="#projects">Projects</a>
             <a href="#skills">Skills</a>
             <a href="#education">Education</a>
             <a href="#contact">Contact</a>
         </nav>
+        <button class="theme-toggle" id="theme" aria-label="Switch to dark mode"><i class="fa-solid fa-moon"></i></button>
     </header>
 
     <main id="top">
-        <!-- Intro -->
         <section class="intro">
             <div class="intro-left">
                 <span class="badge in" style="--d:0s">Available for work</span>
@@ -37,42 +49,55 @@
                     <a href="#contact" class="btn btn-ghost">Get in touch</a>
                 </div>
                 <div class="social-icons in" style="--d:.4s">
-                    <a href="#" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
-                    <a href="#" aria-label="X"><i class="fa-brands fa-x-twitter"></i></a>
+                    <a href="https://github.com/ahmadali512" target="_blank" rel="noopener" aria-label="GitHub"><i class="fa-brands fa-github"></i></a>
                     <a href="#" aria-label="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
+                    <a href="#" aria-label="X"><i class="fa-brands fa-x-twitter"></i></a>
+                    <a href="#" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
                 </div>
             </div>
             <div class="intro-right in" style="--d:.2s">
-                <img src="pic.jpg" alt="Ahmad's Picture">
+                <img src="pic.jpg" alt="Portrait of Ahmad Ali" width="260" height="260">
             </div>
         </section>
 
-        <!-- Projects -->
+        <section id="about" class="section">
+            <h2 class="heading reveal">About me</h2>
+            <p class="about-text reveal">I build full stack web apps, from the interface people click to the database behind it. I enjoy turning ideas into working products, and I'm always learning something new alongside my degree.</p>
+            <div class="stats">
+                <div class="stat reveal" style="--i:0"><b data-count="projects">0</b><span>Featured projects</span></div>
+                <div class="stat reveal" style="--i:1"><b data-count="skills">0</b><span>Technologies</span></div>
+                <div class="stat reveal" style="--i:2"><b data-count="8">0</b><span>Languages</span></div>
+            </div>
+        </section>
+
         <section id="projects" class="section">
-            <p class="eyebrow reveal">Selected work</p>
             <h2 class="heading reveal">Projects</h2>
             <div class="projects-container">
                 <article class="project reveal" style="--i:0">
-                    <div class="thumb"><img src="https://github.com/TT-talhatariq/Expense-Tracker/raw/main/img.png" alt="Expense Tracker"></div>
+                    <div class="thumb"><img loading="lazy" src="https://github.com/TT-talhatariq/Expense-Tracker/raw/main/img.png" alt="Expense Tracker screenshot"></div>
                     <h3>Expense Tracker</h3>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime accusamus quam quibusdam ad veritatis a?</p>
+                    <p>Log income and expenses, group them by category and see your running balance at a glance.</p>
+                    <ul class="tags"><li>JavaScript</li><li>HTML</li><li>CSS</li></ul>
+                    <div class="links"><a href="#" aria-label="Expense Tracker live demo"><i class="fa-solid fa-arrow-up-right-from-square"></i> Live</a><a href="https://github.com/ahmadali512" target="_blank" rel="noopener"><i class="fa-brands fa-github"></i> Code</a></div>
                 </article>
                 <article class="project reveal" style="--i:1">
-                    <div class="thumb"><img src="https://www.rishabhsoft.com/wp-content/uploads/2025/11/AI-Chatbot-Development.jpg" alt="AI Chatbot"></div>
+                    <div class="thumb"><img loading="lazy" src="https://www.rishabhsoft.com/wp-content/uploads/2025/11/AI-Chatbot-Development.jpg" alt="AI Chatbot screenshot"></div>
                     <h3>AI Chatbot</h3>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime accusamus quam quibusdam ad veritatis a?</p>
+                    <p>A chat interface that answers questions in plain language and keeps the conversation going.</p>
+                    <ul class="tags"><li>Python</li><li>Flask</li><li>JavaScript</li></ul>
+                    <div class="links"><a href="#" aria-label="AI Chatbot live demo"><i class="fa-solid fa-arrow-up-right-from-square"></i> Live</a><a href="https://github.com/ahmadali512" target="_blank" rel="noopener"><i class="fa-brands fa-github"></i> Code</a></div>
                 </article>
                 <article class="project reveal" style="--i:2">
-                    <div class="thumb"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSHWkuZ8mTzmF8EKTPbn3zZYB0GEW2ArglsYUpB-tXj7uT8vkI0F8_Qk5A&s=10" alt="Face Recognition System"></div>
+                    <div class="thumb"><img loading="lazy" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSHWkuZ8mTzmF8EKTPbn3zZYB0GEW2ArglsYUpB-tXj7uT8vkI0F8_Qk5A&s=10" alt="Face Recognition System screenshot"></div>
                     <h3>Face Recognition System</h3>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime accusamus quam quibusdam ad veritatis a?</p>
+                    <p>Face-based login and attendance for a university, so students check in without typing a password.</p>
+                    <ul class="tags"><li>Python</li><li>OpenCV</li><li>SQL</li></ul>
+                    <div class="links"><a href="#" aria-label="Face Recognition live demo"><i class="fa-solid fa-arrow-up-right-from-square"></i> Live</a><a href="https://github.com/ahmadali512" target="_blank" rel="noopener"><i class="fa-brands fa-github"></i> Code</a></div>
                 </article>
             </div>
         </section>
 
-        <!-- Skills -->
         <section id="skills" class="section">
-            <p class="eyebrow reveal">What I work with</p>
             <h2 class="heading reveal">Skills</h2>
             <div class="skills-grid">
                 <div class="skill-group reveal" style="--i:0">
@@ -94,9 +119,7 @@
             </div>
         </section>
 
-        <!-- Education -->
         <section id="education" class="section">
-            <p class="eyebrow reveal">My journey</p>
             <h2 class="heading reveal">Education</h2>
             <div class="timeline">
                 <div class="tl-item reveal">
@@ -114,7 +137,7 @@
                         <span class="tl-date">2022 &ndash; 2024</span>
                         <h3>Intermediate (FSc / ICS)</h3>
                         <h4>Punjab College</h4>
-                        <p>Studied FSc Pre Engineering</p>
+                        <p>Studied FSc Pre Engineering.</p>
                     </div>
                 </div>
                 <div class="tl-item reveal">
@@ -123,21 +146,25 @@
                         <span class="tl-date">2020 &ndash; 2022</span>
                         <h3>Matriculation</h3>
                         <h4>Best School System</h4>
-                        <p>Done Matriculation with biology.</p>
+                        <p>Completed Matriculation with biology.</p>
                     </div>
                 </div>
             </div>
         </section>
     </main>
 
-    <!-- Footer -->
     <footer id="contact" class="footer">
         <h2>Let's build something together</h2>
         <p>Have a project in mind? I'd love to hear about it.</p>
-        <a href="mailto:you@example.com" class="btn btn-primary">Say hello</a>
+        <div class="actions">
+            <a href="mailto:you@example.com" class="btn btn-primary">Say hello</a>
+            <button class="btn btn-light" id="copy" type="button">Copy email</button>
+        </div>
         <small>&copy; 2026 Ahmad Ali</small>
     </footer>
 
+    <button class="to-top" id="top-btn" aria-label="Back to top"><i class="fa-solid fa-arrow-up"></i></button>
     <script src="script.js"></script>
+    <script src="upgrade.js"></script>
 </body>
 </html>
